@@ -97,19 +97,21 @@ function findAllOccurrences(arr, item) {
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
 function removeFalsyValues(arr) {
-  return arr.filter((element) => {
-    if (
-      element !== false &&
-      element !== null &&
-      element !== 0 &&
-      element !== '' &&
-      element !== undefined &&
-      !Number.isNaN(element)
-    ) {
-      return element;
-    }
-    return '';
-  });
+  // return arr.filter((element) => {
+  //   if (
+  //     element !== false &&
+  //     element !== null &&
+  //     element !== 0 &&
+  //     element !== '' &&
+  //     element !== undefined &&
+  //     !Number.isNaN(element)
+  //   ) {
+  //     return element;
+  //   }
+  //   return '';
+  // });
+
+  return arr.filter((element) => Boolean(element) !== false);
 }
 
 /**
